@@ -1,0 +1,101 @@
+html, body {
+  height: 100%;          
+  margin: 0;             
+  color: rgb(0, 0, 0);
+}
+
+body {
+  background-color: black;  
+  background-size: cover;   
+  background-position: bottom; 
+  background-repeat: no-repeat; 
+  height: 100%;            
+}
+
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #1e1e2b;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+.inset {
+  border-style: inset;
+}
+
+.color {
+  color: black;
+  border-style: inset;
+  text-align: center;
+  border-width: 3px;
+}
+
+.font-custom {
+  font-family: 'custom', monospace;
+  src: url(assets/fonts/consolaz.ttf) format('truetype');
+}
+
+.font-size {
+  font-family: 'custom', monospace;
+  src: url(assets/fonts/consolaz.ttf) format('truetype');
+  font-size: 100px;
+}
+
+.typing-text {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  animation: typing 4s steps(20) infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+html, body {
+  cursor: url('assets/custom-cursor/cursor.png') 32 32, auto; 
+}
